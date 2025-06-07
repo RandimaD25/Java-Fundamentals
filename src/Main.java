@@ -66,36 +66,72 @@ public class Main {
 //
 //        scanner.close();
 
-//        Madlibs game
+//        Mad libs game
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String adjective1;
+//        String noun;
+//        String adjective2;
+//        String verb;
+//        String adjective3;
+//
+//        System.out.print("Enter an adjective: ");
+//        adjective1 = scanner.nextLine();
+//
+//        System.out.print("Enter a noun: ");
+//        noun = scanner.nextLine();
+//
+//        System.out.print("Enter an adjective: ");
+//        adjective2 = scanner.nextLine();
+//
+//        System.out.print("Enter a verb: ");
+//        verb = scanner.nextLine();
+//
+//        System.out.print("Enter an adjective: ");
+//        adjective3 = scanner.nextLine();
+//
+//        System.out.println("\nToday I went to the " + adjective1 + " school.");
+//        System.out.println("There was a small " + noun + " .");
+//        System.out.println("I saw " + adjective2 + " kids were " + verb +" there.");
+//        System.out.println("I am saw happy to see that " + adjective3 + " school.");
+//
+//        scanner.close();
 
-        String adjective1;
-        String noun;
-        String adjective2;
-        String verb;
-        String adjective3;
+//        arithmetic operators
+//        int x = 10;
+//        int y = 3;
+//        int z;
 
-        System.out.print("Enter an adjective: ");
-        adjective1 = scanner.nextLine();
+//        z = x + y;
+//        z = x - y;
+//        z = x * y;
+//        z = x / y;
+//          z = x % y;
+//        System.out.println(z);
 
-        System.out.print("Enter a noun: ");
-        noun = scanner.nextLine();
+//        Augmented Assignment Operators
+//        int x = 10;
+//        int y = 5;
 
-        System.out.print("Enter an adjective: ");
-        adjective2 = scanner.nextLine();
+//        x += y;
+//        x -= y;
+//        x *= y;
+//        x /= y;
+//        x %= y;
+//        System.out.println(x);
 
-        System.out.print("Enter a verb: ");
-        verb = scanner.nextLine();
+//        Increment and decrement operator
+        int a = 20;
+        a++;
+        a++;
+        a++;
+        a--;
+        a--;
+        System.out.println(a);
 
-        System.out.print("Enter an adjective: ");
-        adjective3 = scanner.nextLine();
-
-        System.out.println("\nToday I went to the " + adjective1 + " school.");
-        System.out.println("There was a small " + noun + " .");
-        System.out.println("I saw " + adjective2 + " kids were " + verb +" there.");
-        System.out.println("I am saw happy to see that " + adjective3 + " school.");
-
-        scanner.close();
+//        order of operations (P-E-M-D-A-S)
+        double result = 2 + 5 * (4 + 6) / 2;
+        System.out.println(result);
     }
 }
