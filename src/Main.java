@@ -122,16 +122,35 @@ public class Main {
 //        System.out.println(x);
 
 //        Increment and decrement operator
-        int a = 20;
-        a++;
-        a++;
-        a++;
-        a--;
-        a--;
-        System.out.println(a);
+//        int a = 20;
+//        a++;
+//        a++;
+//        a++;
+//        a--;
+//        a--;
+//        System.out.println(a);
 
 //        order of operations (P-E-M-D-A-S)
-        double result = 2 + 5 * (4 + 6) / 2;
-        System.out.println(result);
+//        double result = 2 + 5 * (4 + 6) / 2;
+//        System.out.println(result);
+
+//        Shopping cart program
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("What item would you like to buy: ");
+        String item = scanner.nextLine();
+
+        System.out.print("What is the price for each: ");
+        double price = scanner.nextDouble();
+
+        System.out.print("How many would you like: ");
+        int count = scanner.nextInt();
+
+        double total = price * count;
+
+        System.out.println("You have bought " + count + " " + item + "/s");
+        System.out.println("Your total is: $" + total);
+
+        scanner.close();
     }
 }
