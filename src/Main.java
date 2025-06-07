@@ -54,15 +54,47 @@ public class Main {
 
 //        calculate area of the rectangle
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the width: ");
+//        double width = scanner.nextDouble();
+//
+//        System.out.print("Enter your height: ");
+//        double height = scanner.nextDouble();
+//
+//        double area = width * height;
+//        System.out.println("Area is: " + area + "cm²");
+//
+//        scanner.close();
+
+//        Madlibs game
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the width: ");
-        double width = scanner.nextDouble();
 
-        System.out.print("Enter your height: ");
-        double height = scanner.nextDouble();
+        String adjective1;
+        String noun;
+        String adjective2;
+        String verb;
+        String adjective3;
 
-        double area = width * height;
-        System.out.println("Area is: " + area + "cm²");
+        System.out.print("Enter an adjective: ");
+        adjective1 = scanner.nextLine();
+
+        System.out.print("Enter a noun: ");
+        noun = scanner.nextLine();
+
+        System.out.print("Enter an adjective: ");
+        adjective2 = scanner.nextLine();
+
+        System.out.print("Enter a verb: ");
+        verb = scanner.nextLine();
+
+        System.out.print("Enter an adjective: ");
+        adjective3 = scanner.nextLine();
+
+        System.out.println("\nToday I went to the " + adjective1 + " school.");
+        System.out.println("There was a small " + noun + " .");
+        System.out.println("I saw " + adjective2 + " kids were " + verb +" there.");
+        System.out.println("I am saw happy to see that " + adjective3 + " school.");
 
         scanner.close();
     }
