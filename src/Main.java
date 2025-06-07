@@ -135,22 +135,50 @@ public class Main {
 //        System.out.println(result);
 
 //        Shopping cart program
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("What item would you like to buy: ");
+//        String item = scanner.nextLine();
+//
+//        System.out.print("What is the price for each: ");
+//        double price = scanner.nextDouble();
+//
+//        System.out.print("How many would you like: ");
+//        int count = scanner.nextInt();
+//
+//        double total = price * count;
+//
+//        System.out.println("You have bought " + count + " " + item + "/s");
+//        System.out.println("Your total is: $" + total);
+//
+//        scanner.close();
+
+//        If statement
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("What item would you like to buy: ");
-        String item = scanner.nextLine();
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
 
-        System.out.print("What is the price for each: ");
-        double price = scanner.nextDouble();
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
 
-        System.out.print("How many would you like: ");
-        int count = scanner.nextInt();
+        if (name.isEmpty()) {
+            System.out.println("You haven't enter your name");
+        } else {
+            System.out.println("Hello " + name);
+        }
 
-        double total = price * count;
-
-        System.out.println("You have bought " + count + " " + item + "/s");
-        System.out.println("Your total is: $" + total);
-
+        if(age >= 60) {
+            System.out.println("You are a senior");
+        } else if (age >= 18) {
+            System.out.println("You are an adult");
+        } else if (age == 0) {
+            System.out.println("You just born");
+        } else if (age < 0) {
+            System.out.println("You haven't born");
+        } else {
+            System.out.println("You are a child");
+        }
         scanner.close();
     }
 }
