@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -154,31 +155,42 @@ public class Main {
 //        scanner.close();
 
 //        If statement
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter your name: ");
+//        String name = scanner.nextLine();
+//
+//        System.out.print("Enter your age: ");
+//        int age = scanner.nextInt();
+//
+//        if (name.isEmpty()) {
+//            System.out.println("You haven't enter your name");
+//        } else {
+//            System.out.println("Hello " + name);
+//        }
+//
+//        if(age >= 60) {
+//            System.out.println("You are a senior");
+//        } else if (age >= 18) {
+//            System.out.println("You are an adult");
+//        } else if (age == 0) {
+//            System.out.println("You just born");
+//        } else if (age < 0) {
+//            System.out.println("You haven't born");
+//        } else {
+//            System.out.println("You are a child");
+//        }
+//        scanner.close();
 
-        System.out.print("Enter your name: ");
-        String name = scanner.nextLine();
+//        Random Numbers
+        Random random = new Random();
 
-        System.out.print("Enter your age: ");
-        int age = scanner.nextInt();
+        int number = random.nextInt(1, 6);
+        double number2 = random.nextDouble();
+        boolean isHead = random.nextBoolean();
 
-        if (name.isEmpty()) {
-            System.out.println("You haven't enter your name");
-        } else {
-            System.out.println("Hello " + name);
-        }
-
-        if(age >= 60) {
-            System.out.println("You are a senior");
-        } else if (age >= 18) {
-            System.out.println("You are an adult");
-        } else if (age == 0) {
-            System.out.println("You just born");
-        } else if (age < 0) {
-            System.out.println("You haven't born");
-        } else {
-            System.out.println("You are a child");
-        }
-        scanner.close();
+        System.out.println(number);
+        System.out.println(number2);
+        System.out.println(isHead);
     }
 }
