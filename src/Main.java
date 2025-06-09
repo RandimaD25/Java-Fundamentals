@@ -197,50 +197,92 @@ public class Main {
 //        System.out.println(Math.PI);
 //        System.out.println(Math.E);
 
-        double result;
-        result = Math.pow(2, 3);
-        result = Math.abs(-5);
-        result = Math.sqrt(9);
-        result = Math.round(5.5);
-        result = Math.ceil(3.19);
-        result = Math.floor(5.99);
-        result = Math.max(10, 20);
-        result = Math.min(10, 20);
-
-        System.out.println(result);
+//        double result;
+//        result = Math.pow(2, 3);
+//        result = Math.abs(-5);
+//        result = Math.sqrt(9);
+//        result = Math.round(5.5);
+//        result = Math.ceil(3.19);
+//        result = Math.floor(5.99);
+//        result = Math.max(10, 20);
+//        result = Math.min(10, 20);
+//
+//        System.out.println(result);
 
 //        Hypotenuse c = a² + b²
-        Scanner scanner = new Scanner(System.in);
-
-        double a;
-        double b;
-        double c;
-
-        System.out.print("Enter side a: ");
-        a = scanner.nextDouble();
-
-        System.out.print("Enter side b: ");
-        b = scanner.nextDouble();
-
-        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        System.out.println("Hypotenuse (c) = " + c + " cm");
+//        Scanner scanner = new Scanner(System.in);
+//
+//        double a;
+//        double b;
+//        double c;
+//
+//        System.out.print("Enter side a: ");
+//        a = scanner.nextDouble();
+//
+//        System.out.print("Enter side b: ");
+//        b = scanner.nextDouble();
+//
+//        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+//        System.out.println("Hypotenuse (c) = " + c + " cm");
 
 //        circumference = 2 * PI * r
 
-        System.out.print("Enter the radius: ");
-        double r = scanner.nextDouble();
-        double circumference = 2 * Math.PI * r;
-        System.out.println("Circumference = " + circumference + " cm");
+//        System.out.print("Enter the radius: ");
+//        double r = scanner.nextDouble();
+//        double circumference = 2 * Math.PI * r;
+//        System.out.println("Circumference = " + circumference + " cm");
 
 //        area = PI * r²
-        double area = Math.PI * Math.pow(r, 2);
-        System.out.println("Area = " + area + " cm²");
+//        double area = Math.PI * Math.pow(r, 2);
+//        System.out.println("Area = " + area + " cm²");
 
 //        volume = 4/3 * PI * r³
-        double volume = 4 / 3 * Math.PI * Math.pow(r, 3);
-        System.out.println("Volume = " + volume + " cm³");
+//        double volume = 4 / 3 * Math.PI * Math.pow(r, 3);
+//        System.out.println("Volume = " + volume + " cm³");
+//
+//        scanner.close();
 
-        scanner.close();
+//        printf method
 
+        String name = "Spongebob";
+        char firstLetter = 'S';
+        int age = 25;
+        double height = 160.5;
+        boolean isEmployeed = true;
+
+        System.out.printf("Hello %s\n", name);
+        System.out.printf("Your name stat with %c\n", firstLetter);
+        System.out.printf("Your age is %d\n", age);
+        System.out.printf("You height is %f cm \n", height);
+        System.out.printf("You are employeed %b\n", isEmployeed);
+        System.out.printf("%s is %d years old.\n", name, age);
+
+        double price1 = 99000.9999;
+        double price2 = 12000.234;
+        double price3 = -23000.5;
+
+        System.out.printf("%+.3f\n", price1);
+        System.out.printf("%+.3f\n", price2);
+        System.out.printf("%+.3f\n", price3);
+
+        System.out.printf("%,.1f\n", price1);
+        System.out.printf("%,.1f\n", price2);
+        System.out.printf("%,.1f\n", price3);
+
+        System.out.printf("%(.1f\n", price1);
+        System.out.printf("%(.1f\n", price3);
+
+        System.out.printf("% .1f\n", price1);
+        System.out.printf("% .1f\n", price3);
+
+        int num1 = 1;
+        int num2 = 10;
+        int num3 = 100;
+        int num4 = 1000;
+
+        System.out.printf("%-4d\n", num1);
+        System.out.printf("%-4d\n", num2);
+        System.out.printf("%-4d\n", num3);
+        System.out.printf("%-4d\n", num4);
     }
 }
