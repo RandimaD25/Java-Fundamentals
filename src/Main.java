@@ -183,14 +183,64 @@ public class Main {
 //        scanner.close();
 
 //        Random Numbers
-        Random random = new Random();
+//        Random random = new Random();
+//
+//        int number = random.nextInt(1, 6);
+//        double number2 = random.nextDouble();
+//        boolean isHead = random.nextBoolean();
+//
+//        System.out.println(number);
+//        System.out.println(number2);
+//        System.out.println(isHead);
 
-        int number = random.nextInt(1, 6);
-        double number2 = random.nextDouble();
-        boolean isHead = random.nextBoolean();
+//        Math class
+//        System.out.println(Math.PI);
+//        System.out.println(Math.E);
 
-        System.out.println(number);
-        System.out.println(number2);
-        System.out.println(isHead);
+        double result;
+        result = Math.pow(2, 3);
+        result = Math.abs(-5);
+        result = Math.sqrt(9);
+        result = Math.round(5.5);
+        result = Math.ceil(3.19);
+        result = Math.floor(5.99);
+        result = Math.max(10, 20);
+        result = Math.min(10, 20);
+
+        System.out.println(result);
+
+//        Hypotenuse c = a² + b²
+        Scanner scanner = new Scanner(System.in);
+
+        double a;
+        double b;
+        double c;
+
+        System.out.print("Enter side a: ");
+        a = scanner.nextDouble();
+
+        System.out.print("Enter side b: ");
+        b = scanner.nextDouble();
+
+        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        System.out.println("Hypotenuse (c) = " + c + " cm");
+
+//        circumference = 2 * PI * r
+
+        System.out.print("Enter the radius: ");
+        double r = scanner.nextDouble();
+        double circumference = 2 * Math.PI * r;
+        System.out.println("Circumference = " + circumference + " cm");
+
+//        area = PI * r²
+        double area = Math.PI * Math.pow(r, 2);
+        System.out.println("Area = " + area + " cm²");
+
+//        volume = 4/3 * PI * r³
+        double volume = 4 / 3 * Math.PI * Math.pow(r, 3);
+        System.out.println("Volume = " + volume + " cm³");
+
+        scanner.close();
+
     }
 }
