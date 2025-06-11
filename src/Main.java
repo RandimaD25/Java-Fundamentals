@@ -313,27 +313,47 @@ public class Main {
 
 //        nested is statement
 
-        boolean isStudent = false;
-        boolean isSenior = false;
-        double price = 9.99;
+//        boolean isStudent = false;
+//        boolean isSenior = false;
+//        double price = 9.99;
+//
+//        if (isStudent) {
+//            if (isSenior) {
+//                System.out.println("You get 10% discount");
+//                System.out.println("You get 20% discount");
+//                System.out.printf("Ticket price = %.2f", price * 0.7);
+//            } else {
+//                System.out.println("You get 10% discount");
+//                System.out.printf("Ticket price = %.2f", price * 0.9);
+//            }
+//        } else {
+//            if (isSenior) {
+//                System.out.println("You get 20% discount");
+//                System.out.printf("Ticket price = %.2f", price * 0.8);
+//            } else {
+//                System.out.println("You don't have discount");
+//                System.out.printf("Ticket price = %.2f", price);
+//            }
+//        }
 
-        if (isStudent) {
-            if (isSenior) {
-                System.out.println("You get 10% discount");
-                System.out.println("You get 20% discount");
-                System.out.printf("Ticket price = %.2f", price * 0.7);
-            } else {
-                System.out.println("You get 10% discount");
-                System.out.printf("Ticket price = %.2f", price * 0.9);
-            }
-        } else {
-            if (isSenior) {
-                System.out.println("You get 20% discount");
-                System.out.printf("Ticket price = %.2f", price * 0.8);
-            } else {
-                System.out.println("You don't have discount");
-                System.out.printf("Ticket price = %.2f", price);
-            }
-        }
+//        String methods
+        String name = "Randima Methmini Dias";
+        int length = name.length();
+
+        char index = name.charAt(10);
+        int indexOf = name.indexOf("M");
+        int indexLast = name.lastIndexOf("a");
+        String upper = name.toUpperCase();
+        String lower = name.toLowerCase();
+        String trim = name.trim();
+        String replace = name.replace("a", "z");
+        boolean contains = name.contains("e");
+        boolean equal = name.equals("randima methmini Dias");
+        boolean ignoreCase = name.equalsIgnoreCase("randima methmini Dias");
+
+//        System.out.println(name.isEmpty());
+        System.out.println(equal);
+        System.out.println(ignoreCase);
+
     }
 }
