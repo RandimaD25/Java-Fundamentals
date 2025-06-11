@@ -378,29 +378,39 @@ public class Main {
 
 //        Weight conversion program
 
+//        Scanner scanner = new Scanner(System.in);
+//        double weight;
+//        double newWeight;
+//        int choice;
+//
+//        System.out.println("If you want to convert kg s to lbs choose 1");
+//        System.out.println("If you want to convert lbs to kg s choose 2");
+//        System.out.print("What is your choice: ");
+//        choice = scanner.nextInt();
+//
+//        if (choice == 1) {
+//            System.out.print("Enter your weight in kg s: ");
+//            weight = scanner.nextDouble();
+//            newWeight = weight * 2.20462;
+//            System.out.printf("So weight in lbs is: %.2f lbs\n", newWeight);
+//        } else if (choice == 2) {
+//            System.out.print("Enter your weight in lbs: ");
+//            weight = scanner.nextDouble();
+//            newWeight = weight / 2.20462;
+//            System.out.printf("So weight in kg s is: %.2f kg", newWeight);
+//        } else {
+//            System.out.println("You have entered invalid choice");
+//        }
+//
+//        scanner.close();
+
+//        ternary operator
+
         Scanner scanner = new Scanner(System.in);
-        double weight;
-        double newWeight;
-        int choice;
-
-        System.out.println("If you want to convert kg s to lbs choose 1");
-        System.out.println("If you want to convert lbs to kg s choose 2");
-        System.out.print("What is your choice: ");
-        choice = scanner.nextInt();
-
-        if (choice == 1) {
-            System.out.print("Enter your weight in kg s: ");
-            weight = scanner.nextDouble();
-            newWeight = weight * 2.20462;
-            System.out.printf("So weight in lbs is: %.2f lbs\n", newWeight);
-        } else if (choice == 2) {
-            System.out.print("Enter your weight in lbs: ");
-            weight = scanner.nextDouble();
-            newWeight = weight / 2.20462;
-            System.out.printf("So weight in kg s is: %.2f kg", newWeight);
-        } else {
-            System.out.println("You have entered invalid choice");
-        }
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        String result = (number % 2 == 0) ? "Even" : "Odd";
+        System.out.println(result);
 
         scanner.close();
     }
