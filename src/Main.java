@@ -244,45 +244,71 @@ public class Main {
 
 //        printf method
 
-        String name = "Spongebob";
-        char firstLetter = 'S';
-        int age = 25;
-        double height = 160.5;
-        boolean isEmployeed = true;
+//        String name = "Spongebob";
+//        char firstLetter = 'S';
+//        int age = 25;
+//        double height = 160.5;
+//        boolean isEmployeed = true;
+//
+//        System.out.printf("Hello %s\n", name);
+//        System.out.printf("Your name stat with %c\n", firstLetter);
+//        System.out.printf("Your age is %d\n", age);
+//        System.out.printf("You height is %f cm \n", height);
+//        System.out.printf("You are employeed %b\n", isEmployeed);
+//        System.out.printf("%s is %d years old.\n", name, age);
+//
+//        double price1 = 99000.9999;
+//        double price2 = 12000.234;
+//        double price3 = -23000.5;
+//
+//        System.out.printf("%+.3f\n", price1);
+//        System.out.printf("%+.3f\n", price2);
+//        System.out.printf("%+.3f\n", price3);
+//
+//        System.out.printf("%,.1f\n", price1);
+//        System.out.printf("%,.1f\n", price2);
+//        System.out.printf("%,.1f\n", price3);
+//
+//        System.out.printf("%(.1f\n", price1);
+//        System.out.printf("%(.1f\n", price3);
+//
+//        System.out.printf("% .1f\n", price1);
+//        System.out.printf("% .1f\n", price3);
+//
+//        int num1 = 1;
+//        int num2 = 10;
+//        int num3 = 100;
+//        int num4 = 1000;
+//
+//        System.out.printf("%-4d\n", num1);
+//        System.out.printf("%-4d\n", num2);
+//        System.out.printf("%-4d\n", num3);
+//        System.out.printf("%-4d\n", num4);
 
-        System.out.printf("Hello %s\n", name);
-        System.out.printf("Your name stat with %c\n", firstLetter);
-        System.out.printf("Your age is %d\n", age);
-        System.out.printf("You height is %f cm \n", height);
-        System.out.printf("You are employeed %b\n", isEmployeed);
-        System.out.printf("%s is %d years old.\n", name, age);
+//        Compound interest calculator
 
-        double price1 = 99000.9999;
-        double price2 = 12000.234;
-        double price3 = -23000.5;
+        Scanner scanner = new Scanner(System.in);
+        double principal;
+        double rate;
+        int timeCompound;
+        int years;
+        double amount;
 
-        System.out.printf("%+.3f\n", price1);
-        System.out.printf("%+.3f\n", price2);
-        System.out.printf("%+.3f\n", price3);
+        System.out.print("Enter the principal amount: ");
+        principal = scanner.nextDouble();
 
-        System.out.printf("%,.1f\n", price1);
-        System.out.printf("%,.1f\n", price2);
-        System.out.printf("%,.1f\n", price3);
+        System.out.print("Enter the rate (in %): ");
+        rate = scanner.nextDouble() / 100;
 
-        System.out.printf("%(.1f\n", price1);
-        System.out.printf("%(.1f\n", price3);
+        System.out.print("Enter the time compounded yearly: ");
+        timeCompound = scanner.nextInt();
 
-        System.out.printf("% .1f\n", price1);
-        System.out.printf("% .1f\n", price3);
+        System.out.print("Enter the years: ");
+        years = scanner.nextInt();
 
-        int num1 = 1;
-        int num2 = 10;
-        int num3 = 100;
-        int num4 = 1000;
-
-        System.out.printf("%-4d\n", num1);
-        System.out.printf("%-4d\n", num2);
-        System.out.printf("%-4d\n", num3);
-        System.out.printf("%-4d\n", num4);
+        amount = principal * Math.pow((1 + rate / timeCompound), timeCompound * years);
+        System.out.printf("Amount after the %d years : $ %.2f", years, amount);
+        
+        scanner.close();
     }
 }
