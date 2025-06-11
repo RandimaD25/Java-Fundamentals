@@ -337,23 +337,45 @@ public class Main {
 //        }
 
 //        String methods
-        String name = "Randima Methmini Dias";
-        int length = name.length();
-
-        char index = name.charAt(10);
-        int indexOf = name.indexOf("M");
-        int indexLast = name.lastIndexOf("a");
-        String upper = name.toUpperCase();
-        String lower = name.toLowerCase();
-        String trim = name.trim();
-        String replace = name.replace("a", "z");
-        boolean contains = name.contains("e");
-        boolean equal = name.equals("randima methmini Dias");
-        boolean ignoreCase = name.equalsIgnoreCase("randima methmini Dias");
-
+//        String name = "Randima Methmini Dias";
+//        int length = name.length();
+//
+//        char index = name.charAt(10);
+//        int indexOf = name.indexOf("M");
+//        int indexLast = name.lastIndexOf("a");
+//        String upper = name.toUpperCase();
+//        String lower = name.toLowerCase();
+//        String trim = name.trim();
+//        String replace = name.replace("a", "z");
+//        boolean contains = name.contains("e");
+//        boolean equal = name.equals("randima methmini Dias");
+//        boolean ignoreCase = name.equalsIgnoreCase("randima methmini Dias");
+//
 //        System.out.println(name.isEmpty());
-        System.out.println(equal);
-        System.out.println(ignoreCase);
+//        System.out.println(equal);
+//        System.out.println(ignoreCase);
 
+//        substring
+        String email = "randimadias123@gmail.com";
+
+        String username = email.substring(0, 14);
+        String domain = email.substring(15);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your email: ");
+        String emailNew = scanner.nextLine();
+
+        if (emailNew.contains("@")) {
+            String usernameNew = emailNew.substring(0, emailNew.indexOf('@'));
+            String domainNew = emailNew.substring(emailNew.indexOf('@') + 1);
+            System.out.println("Your user name is: " + usernameNew);
+            System.out.println("Your domain is: " + domainNew);
+        } else {
+            System.out.println("Email needs to contain @");
+        }
+
+
+
+        scanner.close();
     }
 }
