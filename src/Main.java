@@ -287,28 +287,53 @@ public class Main {
 
 //        Compound interest calculator
 
-        Scanner scanner = new Scanner(System.in);
-        double principal;
-        double rate;
-        int timeCompound;
-        int years;
-        double amount;
+//        Scanner scanner = new Scanner(System.in);
+//        double principal;
+//        double rate;
+//        int timeCompound;
+//        int years;
+//        double amount;
+//
+//        System.out.print("Enter the principal amount: ");
+//        principal = scanner.nextDouble();
+//
+//        System.out.print("Enter the rate (in %): ");
+//        rate = scanner.nextDouble() / 100;
+//
+//        System.out.print("Enter the time compounded yearly: ");
+//        timeCompound = scanner.nextInt();
+//
+//        System.out.print("Enter the years: ");
+//        years = scanner.nextInt();
+//
+//        amount = principal * Math.pow((1 + rate / timeCompound), timeCompound * years);
+//        System.out.printf("Amount after the %d years : $ %.2f", years, amount);
+//
+//        scanner.close();
 
-        System.out.print("Enter the principal amount: ");
-        principal = scanner.nextDouble();
+//        nested is statement
 
-        System.out.print("Enter the rate (in %): ");
-        rate = scanner.nextDouble() / 100;
+        boolean isStudent = false;
+        boolean isSenior = false;
+        double price = 9.99;
 
-        System.out.print("Enter the time compounded yearly: ");
-        timeCompound = scanner.nextInt();
-
-        System.out.print("Enter the years: ");
-        years = scanner.nextInt();
-
-        amount = principal * Math.pow((1 + rate / timeCompound), timeCompound * years);
-        System.out.printf("Amount after the %d years : $ %.2f", years, amount);
-        
-        scanner.close();
+        if (isStudent) {
+            if (isSenior) {
+                System.out.println("You get 10% discount");
+                System.out.println("You get 20% discount");
+                System.out.printf("Ticket price = %.2f", price * 0.7);
+            } else {
+                System.out.println("You get 10% discount");
+                System.out.printf("Ticket price = %.2f", price * 0.9);
+            }
+        } else {
+            if (isSenior) {
+                System.out.println("You get 20% discount");
+                System.out.printf("Ticket price = %.2f", price * 0.8);
+            } else {
+                System.out.println("You don't have discount");
+                System.out.printf("Ticket price = %.2f", price);
+            }
+        }
     }
 }
