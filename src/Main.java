@@ -356,25 +356,51 @@ public class Main {
 //        System.out.println(ignoreCase);
 
 //        substring
-        String email = "randimadias123@gmail.com";
+//        String email = "randimadias123@gmail.com";
+//
+//        String username = email.substring(0, 14);
+//        String domain = email.substring(15);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter your email: ");
+//        String emailNew = scanner.nextLine();
+//
+//        if (emailNew.contains("@")) {
+//            String usernameNew = emailNew.substring(0, emailNew.indexOf('@'));
+//            String domainNew = emailNew.substring(emailNew.indexOf('@') + 1);
+//            System.out.println("Your user name is: " + usernameNew);
+//            System.out.println("Your domain is: " + domainNew);
+//        } else {
+//            System.out.println("Email needs to contain @");
+//        }
 
-        String username = email.substring(0, 14);
-        String domain = email.substring(15);
+//        scanner.close();
+
+//        Weight conversion program
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your email: ");
-        String emailNew = scanner.nextLine();
+        double weight;
+        double newWeight;
+        int choice;
 
-        if (emailNew.contains("@")) {
-            String usernameNew = emailNew.substring(0, emailNew.indexOf('@'));
-            String domainNew = emailNew.substring(emailNew.indexOf('@') + 1);
-            System.out.println("Your user name is: " + usernameNew);
-            System.out.println("Your domain is: " + domainNew);
+        System.out.println("If you want to convert kg s to lbs choose 1");
+        System.out.println("If you want to convert lbs to kg s choose 2");
+        System.out.print("What is your choice: ");
+        choice = scanner.nextInt();
+
+        if (choice == 1) {
+            System.out.print("Enter your weight in kg s: ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 2.20462;
+            System.out.printf("So weight in lbs is: %.2f lbs\n", newWeight);
+        } else if (choice == 2) {
+            System.out.print("Enter your weight in lbs: ");
+            weight = scanner.nextDouble();
+            newWeight = weight / 2.20462;
+            System.out.printf("So weight in kg s is: %.2f kg", newWeight);
         } else {
-            System.out.println("Email needs to contain @");
+            System.out.println("You have entered invalid choice");
         }
-
-
 
         scanner.close();
     }
