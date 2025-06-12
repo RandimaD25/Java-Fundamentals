@@ -458,44 +458,62 @@ public class Main {
 //        scanner.close();
 
 //        Calculator program
+//        Scanner scanner = new Scanner(System.in);
+//
+//        double num1;
+//        double num2;
+//        char operator;
+//        double result = 0.0;
+//        boolean validOperation = true;
+//
+//        System.out.print("Enter the first number: ");
+//        num1 = scanner.nextDouble();
+//
+//        System.out.print("Enter the operator: ");
+//        operator = scanner.next().charAt(0);
+//
+//        System.out.print("Enter the second number: ");
+//        num2 = scanner.nextDouble();
+//
+//        switch (operator) {
+//            case '+' -> result = num1 + num2;
+//            case '-' -> result = num1 - num2;
+//            case '*' -> result = num1 * num2;
+//            case '/' -> {
+//                if (num2 == 0) {
+//                    System.out.println("You cannot divide by 0");
+//                    validOperation = false;
+//                } else {
+//                    result = num1 / num2;
+//                }
+//            }
+//            case '^' -> result = Math.pow(num1, num2);
+//            default -> {
+//                System.out.println("Invalid operator");
+//                validOperation = false;
+//            }
+//        }
+//
+//        if (validOperation) {
+//            System.out.println("Result is = " + result);
+//        }
+//
+//        scanner.close();
+
+//        Logical operations
+
         Scanner scanner = new Scanner(System.in);
 
-        double num1;
-        double num2;
-        char operator;
-        double result = 0.0;
-        boolean validOperation = true;
+        String username;
+        System.out.print("Enter your username: ");
+        username = scanner.nextLine();
 
-        System.out.print("Enter the first number: ");
-        num1 = scanner.nextDouble();
-
-        System.out.print("Enter the operator: ");
-        operator = scanner.next().charAt(0);
-
-        System.out.print("Enter the second number: ");
-        num2 = scanner.nextDouble();
-
-        switch (operator) {
-            case '+' -> result = num1 + num2;
-            case '-' -> result = num1 - num2;
-            case '*' -> result = num1 * num2;
-            case '/' -> {
-                if (num2 == 0) {
-                    System.out.println("You cannot divide by 0");
-                    validOperation = false;
-                } else {
-                    result = num1 / num2;
-                }
-            }
-            case '^' -> result = Math.pow(num1, num2);
-            default -> {
-                System.out.println("Invalid operator");
-                validOperation = false;
-            }
-        }
-
-        if (validOperation) {
-            System.out.println("Result is = " + result);
+        if (username.length() < 4 || username.length() > 12) {
+            System.out.println("username should have between 4 and 12 characters");
+        } else if (username.contains(" ") || username.contains("_")) {
+            System.out.println("username cannot contain spaces or underscores");
+        } else {
+            System.out.println("Hello " + username);
         }
 
         scanner.close();
