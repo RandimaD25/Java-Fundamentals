@@ -415,20 +415,45 @@ public class Main {
 //        scanner.close();
 
 //        temperature convertor
+//        Scanner scanner = new Scanner(System.in);
+//
+//        double temp;
+//        double newTemp;
+//        String unit;
+//
+//        System.out.print("Enter the temperature: ");
+//        temp = scanner.nextDouble();
+//
+//        System.out.print("Enter the unit C or F: ");
+//        unit = scanner.next().toUpperCase();
+//
+//        newTemp = (unit.equals("C") ? (temp - 32) * 5 / 9 : (temp + 32) * 9 / 5);
+//        System.out.printf("Your temperature is %.1f°%s", newTemp, unit);
+//
+//        scanner.close();
+
+//        Enhanced switch
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the day: ");
+        String day = scanner.nextLine();
 
-        double temp;
-        double newTemp;
-        String unit;
+        switch (day) {
+            case "Monday" -> System.out.println("It is a weekday");
+            case "Tuesday" -> System.out.println("It is a weekday");
+            case "Wednesday" -> System.out.println("It is a weekday");
+            case "Thursday" -> System.out.println("It is a weekday");
+            case "Friday" -> System.out.println("It is a weekday");
+            case "Saturday" -> System.out.println("It is the weekend");
+            case "Sunday" -> System.out.println("It is the weekend");
+            default -> System.out.println(day + " is not a day");
+        }
 
-        System.out.print("Enter the temperature: ");
-        temp = scanner.nextDouble();
-
-        System.out.print("Enter the unit C or F: ");
-        unit = scanner.next().toUpperCase();
-
-        newTemp = (unit.equals("C") ? (temp - 32) * 5 / 9 : (temp + 32) * 9 / 5);
-        System.out.printf("Your temperature is %.1f°%s", newTemp, unit);
+//        You can do it this way
+        switch (day) {
+            case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> System.out.println("It is a weekday");
+            case "Saturday", "Sunday" -> System.out.println("It is the weekend");
+            default -> System.out.println(day + " is not a day");
+        }
 
         scanner.close();
     }
