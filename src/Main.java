@@ -406,11 +406,29 @@ public class Main {
 
 //        ternary operator
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter a number: ");
+//        int number = scanner.nextInt();
+//        String result = (number % 2 == 0) ? "Even" : "Odd";
+//        System.out.println(result);
+
+//        scanner.close();
+
+//        temperature convertor
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-        String result = (number % 2 == 0) ? "Even" : "Odd";
-        System.out.println(result);
+
+        double temp;
+        double newTemp;
+        String unit;
+
+        System.out.print("Enter the temperature: ");
+        temp = scanner.nextDouble();
+
+        System.out.print("Enter the unit C or F: ");
+        unit = scanner.next().toUpperCase();
+
+        newTemp = (unit.equals("C") ? (temp - 32) * 5 / 9 : (temp + 32) * 9 / 5);
+        System.out.printf("Your temperature is %.1f°%s", newTemp, unit);
 
         scanner.close();
     }
