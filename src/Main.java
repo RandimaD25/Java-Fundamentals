@@ -502,19 +502,69 @@ public class Main {
 
 //        Logical operations
 
+//        Scanner scanner = new Scanner(System.in);
+//
+//        String username;
+//        System.out.print("Enter your username: ");
+//        username = scanner.nextLine();
+//
+//        if (username.length() < 4 || username.length() > 12) {
+//            System.out.println("username should have between 4 and 12 characters");
+//        } else if (username.contains(" ") || username.contains("_")) {
+//            System.out.println("username cannot contain spaces or underscores");
+//        } else {
+//            System.out.println("Hello " + username);
+//        }
+//
+//        scanner.close();
+
+//        While loop
         Scanner scanner = new Scanner(System.in);
+        String name = "";
 
-        String username;
-        System.out.print("Enter your username: ");
-        username = scanner.nextLine();
-
-        if (username.length() < 4 || username.length() > 12) {
-            System.out.println("username should have between 4 and 12 characters");
-        } else if (username.contains(" ") || username.contains("_")) {
-            System.out.println("username cannot contain spaces or underscores");
-        } else {
-            System.out.println("Hello " + username);
+        while (name.isEmpty()) {
+            System.out.print("Enter your name: ");
+            name = scanner.nextLine();
         }
+
+        System.out.println("Hello " + name);
+
+        String response = "";
+        while (!response.contains("Q")) {
+            System.out.println("You are playing the game.");
+            System.out.print("Press Q to quit: ");
+            response = scanner.nextLine().toUpperCase();
+        }
+        System.out.println("You quit the game.");
+
+        int age = 0;
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+
+        while (age < 0) {
+            System.out.println("Age cannot be minus");
+            System.out.print("Enter your age: ");
+            age = scanner.nextInt();
+        }
+
+        System.out.println("Your age is " + age);
+
+        do {
+            System.out.println("Age cannot be minus");
+            System.out.print("Enter your age: ");
+            age = scanner.nextInt();
+        } while (age < 0);
+
+        System.out.println("Your age is " + age);
+
+        int number = 0;
+
+        do  {
+            System.out.print("Pick a number between 1 - 10: ");
+            number = scanner.nextInt();
+        } while (number < 1 || number > 11);
+        System.out.println("You picked the number: " + number);
 
         scanner.close();
     }
