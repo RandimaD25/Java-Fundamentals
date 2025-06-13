@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 //        System.out.print("I like pizza\n");
 //        System.out.println(("It is really good"));
 //
@@ -569,34 +569,59 @@ public class Main {
 //        scanner.close();
 
 //        Number guessing game
+//        Scanner scanner = new Scanner(System.in);
+//        Random random = new Random();
+//
+//        int guess;
+//        int randomNumber;
+//        int attempts = 0;
+//        int min = 1;
+//        int max = 10;
+//
+//        randomNumber = random.nextInt(min, max + 1);
+//        System.out.println("Number guessing game");
+//        System.out.printf("Guess a number between %d - %d\n", min, max);
+//
+//        do {
+//            System.out.print("Enter a number: ");
+//            guess = scanner.nextInt();
+//            attempts++;
+//
+//            if (guess < randomNumber) {
+//                System.out.println("Too LOW");
+//            } else if (guess > randomNumber) {
+//                System.out.println("Too HIGH");
+//            } else {
+//                System.out.println("You WON");
+//                System.out.println("# of attempts: " + attempts);
+//            }
+//
+//        } while (guess != randomNumber);
+//        scanner.close();
+
+//        for loop
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("How many times do you want to loop: ");
+//        int max = scanner.nextInt();
+//
+//        for (int i = 1; i <= max; i++) {
+//            System.out.println(i);
+//        }
+//
+//        scanner.close();
+
         Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
+        System.out.print("Enter the number of seconds you want: ");
+        int seconds = scanner.nextInt();
 
-        int guess;
-        int randomNumber;
-        int attempts = 0;
-        int min = 1;
-        int max = 10;
+        for (int i = seconds; i > 0; i-- ) {
+            System.out.println(i);
+            Thread.sleep(1000);
+        }
+        System.out.println("Happy New Year");
 
-        randomNumber = random.nextInt(min, max + 1);
-        System.out.println("Number guessing game");
-        System.out.printf("Guess a number between %d - %d\n", min, max);
 
-        do {
-            System.out.print("Enter a number: ");
-            guess = scanner.nextInt();
-            attempts++;
-
-            if (guess < randomNumber) {
-                System.out.println("Too LOW");
-            } else if (guess > randomNumber) {
-                System.out.println("Too HIGH");
-            } else {
-                System.out.println("You WON");
-                System.out.println("# of attempts: " + attempts);
-            }
-
-        } while (guess != randomNumber);
         scanner.close();
     }
 }
