@@ -519,53 +519,84 @@ public class Main {
 //        scanner.close();
 
 //        While loop
+//        Scanner scanner = new Scanner(System.in);
+//        String name = "";
+//
+//        while (name.isEmpty()) {
+//            System.out.print("Enter your name: ");
+//            name = scanner.nextLine();
+//        }
+//
+//        System.out.println("Hello " + name);
+//
+//        String response = "";
+//        while (!response.contains("Q")) {
+//            System.out.println("You are playing the game.");
+//            System.out.print("Press Q to quit: ");
+//            response = scanner.nextLine().toUpperCase();
+//        }
+//        System.out.println("You quit the game.");
+//
+//        int age = 0;
+//
+//        System.out.print("Enter your age: ");
+//        age = scanner.nextInt();
+//
+//        while (age < 0) {
+//            System.out.println("Age cannot be minus");
+//            System.out.print("Enter your age: ");
+//            age = scanner.nextInt();
+//        }
+//
+//        System.out.println("Your age is " + age);
+//
+//        do {
+//            System.out.println("Age cannot be minus");
+//            System.out.print("Enter your age: ");
+//            age = scanner.nextInt();
+//        } while (age < 0);
+//
+//        System.out.println("Your age is " + age);
+//
+//        int number = 0;
+//
+//        do  {
+//            System.out.print("Pick a number between 1 - 10: ");
+//            number = scanner.nextInt();
+//        } while (number < 1 || number > 11);
+//        System.out.println("You picked the number: " + number);
+//
+//        scanner.close();
+
+//        Number guessing game
         Scanner scanner = new Scanner(System.in);
-        String name = "";
+        Random random = new Random();
 
-        while (name.isEmpty()) {
-            System.out.print("Enter your name: ");
-            name = scanner.nextLine();
-        }
+        int guess;
+        int randomNumber;
+        int attempts = 0;
+        int min = 1;
+        int max = 10;
 
-        System.out.println("Hello " + name);
-
-        String response = "";
-        while (!response.contains("Q")) {
-            System.out.println("You are playing the game.");
-            System.out.print("Press Q to quit: ");
-            response = scanner.nextLine().toUpperCase();
-        }
-        System.out.println("You quit the game.");
-
-        int age = 0;
-
-        System.out.print("Enter your age: ");
-        age = scanner.nextInt();
-
-        while (age < 0) {
-            System.out.println("Age cannot be minus");
-            System.out.print("Enter your age: ");
-            age = scanner.nextInt();
-        }
-
-        System.out.println("Your age is " + age);
+        randomNumber = random.nextInt(min, max + 1);
+        System.out.println("Number guessing game");
+        System.out.printf("Guess a number between %d - %d\n", min, max);
 
         do {
-            System.out.println("Age cannot be minus");
-            System.out.print("Enter your age: ");
-            age = scanner.nextInt();
-        } while (age < 0);
+            System.out.print("Enter a number: ");
+            guess = scanner.nextInt();
+            attempts++;
 
-        System.out.println("Your age is " + age);
+            if (guess < randomNumber) {
+                System.out.println("Too LOW");
+            } else if (guess > randomNumber) {
+                System.out.println("Too HIGH");
+            } else {
+                System.out.println("You WON");
+                System.out.println("# of attempts: " + attempts);
+            }
 
-        int number = 0;
-
-        do  {
-            System.out.print("Pick a number between 1 - 10: ");
-            number = scanner.nextInt();
-        } while (number < 1 || number > 11);
-        System.out.println("You picked the number: " + number);
-
+        } while (guess != randomNumber);
         scanner.close();
     }
 }
