@@ -611,17 +611,29 @@ public class Main {
 //
 //        scanner.close();
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of seconds you want: ");
-        int seconds = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Enter the number of seconds you want: ");
+//        int seconds = scanner.nextInt();
+//
+//        for (int i = seconds; i > 0; i-- ) {
+//            System.out.println(i);
+//            Thread.sleep(1000);
+//        }
+//        System.out.println("Happy New Year");
+//
+//
+//        scanner.close();
 
-        for (int i = seconds; i > 0; i-- ) {
-            System.out.println(i);
-            Thread.sleep(1000);
+//        break &  continue
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) break;
+            System.out.print(i + " ");
         }
-        System.out.println("Happy New Year");
+        System.out.println("\n");
 
-
-        scanner.close();
+        for (int i = 0; i < 10; i++) {
+            if (i == 5) continue;
+            System.out.print(i + " ");
+        }
     }
 }
