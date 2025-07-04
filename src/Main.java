@@ -26,26 +26,54 @@ public class Main {
 //        student1.study();
 //        student2.study();
 
-        User user = new User("Randima");
-        User user1 = new User("Sara", "sara@gmail.com");
-        User user2 = new User("Sandy", "sandy@gmail.com", 24);
-        User user3 = new User();
+//        User user = new User("Randima");
+//        User user1 = new User("Sara", "sara@gmail.com");
+//        User user2 = new User("Sandy", "sandy@gmail.com", 24);
+//        User user3 = new User();
+//
+//        System.out.println(user.username);
+//        System.out.println(user.email);
+//        System.out.println(user.age);
+//
+//        System.out.println(user1.username);
+//        System.out.println(user1.email);
+//        System.out.println(user1.age);
+//
+//        System.out.println(user2.username);
+//        System.out.println(user2.email);
+//        System.out.println(user2.age);
+//
+//        System.out.println(user3.username);
+//        System.out.println(user3.email);
+//        System.out.println(user3.age);
 
-        System.out.println(user.username);
-        System.out.println(user.email);
-        System.out.println(user.age);
+//        array of objects
+        Van van1 = new Van("Red", "BMW");
+        Van van2 = new Van("Blue", "Bence");
+        Van van3 = new Van("Black", "Audi");
 
-        System.out.println(user1.username);
-        System.out.println(user1.email);
-        System.out.println(user1.age);
+        Van[] vans = {van1, van2, van3};
 
-        System.out.println(user2.username);
-        System.out.println(user2.email);
-        System.out.println(user2.age);
+//        anonymous objects
+        Van[] vans2 = {new Van("Pink", "Nissan"), new Van("Yellow", "Toyota")};
 
-        System.out.println(user3.username);
-        System.out.println(user3.email);
-        System.out.println(user3.age);
+        for (int i = 0; i < vans.length; i++) {
+            vans[i].drive();
+        }
+
+        for (Van van: vans) {
+            van.color = "Gold";
+        }
+
+        for (Van van: vans) {
+            van.drive();
+        }
+
+        System.out.println();
+
+        for (Van van: vans2) {
+            van.drive();
+        }
 
     }
 }
