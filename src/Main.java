@@ -56,24 +56,39 @@ public class Main {
 
 //        anonymous objects
         Van[] vans2 = {new Van("Pink", "Nissan"), new Van("Yellow", "Toyota")};
+//
+//        for (int i = 0; i < vans.length; i++) {
+//            vans[i].drive();
+//        }
+//
+//        for (Van van: vans) {
+//            van.color = "Gold";
+//        }
+//
+//        for (Van van: vans) {
+//            van.drive();
+//        }
+//
+//        System.out.println();
+//
+//        for (Van van: vans2) {
+//            van.drive();
+//        }
 
-        for (int i = 0; i < vans.length; i++) {
-            vans[i].drive();
-        }
+//        static keyword
+        Friend friend = new Friend("Sara");
+        Friend friend2 = new Friend("Alice");
+        Friend friend3 = new Friend("Lora");
 
-        for (Van van: vans) {
-            van.color = "Gold";
-        }
+        System.out.println(friend.name);
 
-        for (Van van: vans) {
-            van.drive();
-        }
+//        static member access via instance reference
+        System.out.println(friend.numOfFriends);
+        System.out.println(friend2.numOfFriends);
 
-        System.out.println();
-
-        for (Van van: vans2) {
-            van.drive();
-        }
+//        rather than accessing by instances we can access by the class as numberOfClass is a static
+        System.out.println(Friend.numOfFriends);
+        Friend.showFriends();
 
     }
 }
