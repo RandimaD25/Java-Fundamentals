@@ -76,19 +76,33 @@ public class Main {
 //        }
 
 //        static keyword
-        Friend friend = new Friend("Sara");
-        Friend friend2 = new Friend("Alice");
-        Friend friend3 = new Friend("Lora");
+//        Friend friend = new Friend("Sara");
+//        Friend friend2 = new Friend("Alice");
+//        Friend friend3 = new Friend("Lora");
+//
+//        System.out.println(friend.name);
+//
+////        static member access via instance reference
+//        System.out.println(friend.numOfFriends);
+//        System.out.println(friend2.numOfFriends);
+//
+////        rather than accessing by instances we can access by the class as numberOfClass is a static
+//        System.out.println(Friend.numOfFriends);
+//        Friend.showFriends();
 
-        System.out.println(friend.name);
+//        inheritance
+        Dog dog = new Dog();
+        Cat cat = new Cat();
 
-//        static member access via instance reference
-        System.out.println(friend.numOfFriends);
-        System.out.println(friend2.numOfFriends);
+        System.out.println(dog.isAlive);
+        System.out.println(cat.isAlive);
 
-//        rather than accessing by instances we can access by the class as numberOfClass is a static
-        System.out.println(Friend.numOfFriends);
-        Friend.showFriends();
+        dog.eat();
+        cat.eat();
+
+        System.out.println(dog.lives + " " + cat.lives);
+        dog.speak();
+        cat.speak();
 
     }
 }
