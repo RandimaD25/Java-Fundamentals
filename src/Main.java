@@ -91,18 +91,31 @@ public class Main {
 //        Friend.showFriends();
 
 //        inheritance
-        Dog dog = new Dog();
-        Cat cat = new Cat();
+//        Dog dog = new Dog();
+//        Cat cat = new Cat();
+//
+//        System.out.println(dog.isAlive);
+//        System.out.println(cat.isAlive);
+//
+//        dog.eat();
+//        cat.eat();
+//
+//        System.out.println(dog.lives + " " + cat.lives);
+//        dog.speak();
+//        cat.speak();
 
-        System.out.println(dog.isAlive);
-        System.out.println(cat.isAlive);
+//        static
+        Person person = new Person("Randima", "Dias");
+        person.showName();
 
-        dog.eat();
-        cat.eat();
+        UniStudent student = new UniStudent("Harry", "Potter", 3.24);
+        student.showName();
+        System.out.println(student.gpa);
 
-        System.out.println(dog.lives + " " + cat.lives);
-        dog.speak();
-        cat.speak();
+        student.showGPA();
+
+        Employee employee = new Employee("Emma", "Watson", 4000);
+        employee.showSalary();
 
     }
 }
