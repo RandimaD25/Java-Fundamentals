@@ -118,13 +118,21 @@ public class Main {
 //        employee.showSalary();
 
 //        overriding
-        Elephant elephant = new Elephant();
-        Cow cow = new Cow();
-        Fish fish = new Fish();
+//        Elephant elephant = new Elephant();
+//        Cow cow = new Cow();
+//        Fish fish = new Fish();
+//
+//        elephant.move();
+//        cow.move();
+//        fish.move();
 
-        elephant.move();
-        cow.move();
-        fish.move();
+//        toString method
+        Jeep jeep = new Jeep("Ford", "Mustang", 1999, "Red");
+        System.out.println(jeep);
+//        System.out.println(jeep.make + " " + jeep.model + " " + jeep.year + " " + jeep.color);
+
+        Jeep jeep2 = new Jeep("BMW", "Blara", 2003, "Black");
+        System.out.println(jeep2);
     }
 }
 
