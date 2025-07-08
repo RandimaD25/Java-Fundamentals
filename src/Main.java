@@ -105,18 +105,26 @@ public class Main {
 //        cat.speak();
 
 //        static
-        Person person = new Person("Randima", "Dias");
-        person.showName();
+//        Person person = new Person("Randima", "Dias");
+//        person.showName();
+//
+//        UniStudent student = new UniStudent("Harry", "Potter", 3.24);
+//        student.showName();
+//        System.out.println(student.gpa);
+//
+//        student.showGPA();
+//
+//        Employee employee = new Employee("Emma", "Watson", 4000);
+//        employee.showSalary();
 
-        UniStudent student = new UniStudent("Harry", "Potter", 3.24);
-        student.showName();
-        System.out.println(student.gpa);
+//        overriding
+        Elephant elephant = new Elephant();
+        Cow cow = new Cow();
+        Fish fish = new Fish();
 
-        student.showGPA();
-
-        Employee employee = new Employee("Emma", "Watson", 4000);
-        employee.showSalary();
-
+        elephant.move();
+        cow.move();
+        fish.move();
     }
 }
 
