@@ -127,12 +127,22 @@ public class Main {
 //        fish.move();
 
 //        toString method
-        Jeep jeep = new Jeep("Ford", "Mustang", 1999, "Red");
-        System.out.println(jeep);
-//        System.out.println(jeep.make + " " + jeep.model + " " + jeep.year + " " + jeep.color);
+//        Jeep jeep = new Jeep("Ford", "Mustang", 1999, "Red");
+//        System.out.println(jeep);
+////        System.out.println(jeep.make + " " + jeep.model + " " + jeep.year + " " + jeep.color);
+//
+//        Jeep jeep2 = new Jeep("BMW", "Blara", 2003, "Black");
+//        System.out.println(jeep2);
 
-        Jeep jeep2 = new Jeep("BMW", "Blara", 2003, "Black");
-        System.out.println(jeep2);
+//        abstract
+        Circle circle = new Circle(7);
+        Rectangle rectangle = new Rectangle(2, 4);
+
+        circle.display();
+        rectangle.display();
+
+        System.out.println(circle.area());
+        System.out.println(rectangle.area());
     }
 }
 
