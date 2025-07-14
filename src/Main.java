@@ -145,15 +145,34 @@ public class Main {
 //        System.out.println(rectangle.area());
 
 //        interface
-        Rabbit rabbit = new Rabbit();
-        Hawk hawk = new Hawk();
-        Octopus octopus = new Octopus();
+//        Rabbit rabbit = new Rabbit();
+//        Hawk hawk = new Hawk();
+//        Octopus octopus = new Octopus();
+//
+//        rabbit.flee();
+//        hawk.hunt();
+//        octopus.flee();
+//        octopus.hunt();
 
-        rabbit.flee();
-        hawk.hunt();
-        octopus.flee();
-        octopus.hunt();
+//        Polymorphism
+        Lorry lorry = new Lorry();
+        Bike bike = new Bike();
+        Boat boat = new Boat();
 
+        Vehicle[] vehicles = {lorry, bike, boat};
+
+        for (Vehicle vehicle: vehicles) {
+            vehicle.go();
+        }
+
+        Nimal nimal = new Nimal();
+        Kamal kamal = new Kamal();
+
+        Man[] mans = {nimal, kamal};
+
+        for (Man man: mans) {
+            man.study();
+        }
     }
 }
 
