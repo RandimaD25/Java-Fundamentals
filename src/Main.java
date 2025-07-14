@@ -135,14 +135,25 @@ public class Main {
 //        System.out.println(jeep2);
 
 //        abstract
-        Circle circle = new Circle(7);
-        Rectangle rectangle = new Rectangle(2, 4);
+//        Circle circle = new Circle(7);
+//        Rectangle rectangle = new Rectangle(2, 4);
+//
+//        circle.display();
+//        rectangle.display();
+//
+//        System.out.println(circle.area());
+//        System.out.println(rectangle.area());
 
-        circle.display();
-        rectangle.display();
+//        interface
+        Rabbit rabbit = new Rabbit();
+        Hawk hawk = new Hawk();
+        Octopus octopus = new Octopus();
 
-        System.out.println(circle.area());
-        System.out.println(rectangle.area());
+        rabbit.flee();
+        hawk.hunt();
+        octopus.flee();
+        octopus.hunt();
+
     }
 }
 
