@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Car car = new Car();
@@ -155,24 +157,43 @@ public class Main {
 //        octopus.hunt();
 
 //        Polymorphism
-        Lorry lorry = new Lorry();
-        Bike bike = new Bike();
-        Boat boat = new Boat();
+//        Lorry lorry = new Lorry();
+//        Bike bike = new Bike();
+//        Boat boat = new Boat();
+//
+//        Vehicle[] vehicles = {lorry, bike, boat};
+//
+//        for (Vehicle vehicle: vehicles) {
+//            vehicle.go();
+//        }
+//
+//        Nimal nimal = new Nimal();
+//        Kamal kamal = new Kamal();
+//
+//        Man[] mans = {nimal, kamal};
+//
+//        for (Man man: mans) {
+//            man.study();
+//        }
 
-        Vehicle[] vehicles = {lorry, bike, boat};
+//        Runtime polymorphism
 
-        for (Vehicle vehicle: vehicles) {
-            vehicle.go();
+        Reptile reptile;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Choose Lion (1) or Tiger (2): ");
+        int choice = scanner.nextInt();
+
+        if (choice == 1) {
+            reptile = new Lion();
+            reptile.speak();
+        } else if (choice == 2) {
+            reptile = new Tiger();
+            reptile.speak();
         }
 
-        Nimal nimal = new Nimal();
-        Kamal kamal = new Kamal();
-
-        Man[] mans = {nimal, kamal};
-
-        for (Man man: mans) {
-            man.study();
-        }
+        scanner.close();
     }
 }
 
