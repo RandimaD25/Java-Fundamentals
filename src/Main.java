@@ -178,22 +178,32 @@ public class Main {
 
 //        Runtime polymorphism
 
-        Reptile reptile;
+//        Reptile reptile;
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Choose Lion (1) or Tiger (2): ");
+//        int choice = scanner.nextInt();
+//
+//        if (choice == 1) {
+//            reptile = new Lion();
+//            reptile.speak();
+//        } else if (choice == 2) {
+//            reptile = new Tiger();
+//            reptile.speak();
+//        }
+//
+//        scanner.close();
 
-        Scanner scanner = new Scanner(System.in);
+//       Getters and Setters
 
-        System.out.print("Choose Lion (1) or Tiger (2): ");
-        int choice = scanner.nextInt();
+        Guitar guitar = new Guitar("Yamaha", "Black", 36000);
 
-        if (choice == 1) {
-            reptile = new Lion();
-            reptile.speak();
-        } else if (choice == 2) {
-            reptile = new Tiger();
-            reptile.speak();
-        }
+        guitar.setColor("Cream");
+        guitar.setPrice(-12000);
 
-        scanner.close();
+        System.out.println(guitar.getModel() + " " + guitar.getColor() + " " + guitar.getPrice());
+
     }
 }
 
