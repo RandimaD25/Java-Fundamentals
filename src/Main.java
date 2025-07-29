@@ -197,13 +197,23 @@ public class Main {
 
 //       Getters and Setters
 
-        Guitar guitar = new Guitar("Yamaha", "Black", 36000);
+//        Guitar guitar = new Guitar("Yamaha", "Black", 36000);
+//
+//        guitar.setColor("Cream");
+//        guitar.setPrice(-12000);
+//
+//        System.out.println(guitar.getModel() + " " + guitar.getColor() + " " + guitar.getPrice());
 
-        guitar.setColor("Cream");
-        guitar.setPrice(-12000);
+//        Aggregation
 
-        System.out.println(guitar.getModel() + " " + guitar.getColor() + " " + guitar.getPrice());
+        Book book1 = new Book("Harry Potter", 1203);
+        Book book2 = new Book("BBF", 234);
+        Book book3 = new Book("The fall", 340);
 
+        Book[] books = {book1, book2, book3};
+
+        Library library = new Library("NYC Public Library", 1897, books);
+        library.displayInfo();
     }
 }
 
