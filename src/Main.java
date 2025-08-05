@@ -206,14 +206,23 @@ public class Main {
 
 //        Aggregation
 
-        Book book1 = new Book("Harry Potter", 1203);
-        Book book2 = new Book("BBF", 234);
-        Book book3 = new Book("The fall", 340);
+//        Book book1 = new Book("Harry Potter", 1203);
+//        Book book2 = new Book("BBF", 234);
+//        Book book3 = new Book("The fall", 340);
+//
+//        Book[] books = {book1, book2, book3};
+//
+//        Library library = new Library("NYC Public Library", 1897, books);
+//        library.displayInfo();
 
-        Book[] books = {book1, book2, book3};
+//        Composition
+        Bus bus = new Bus("Layland", 2010, "V8");
 
-        Library library = new Library("NYC Public Library", 1897, books);
-        library.displayInfo();
+        System.out.println(bus.model);
+        System.out.println(bus.year);
+        System.out.println(bus.engine.type);
+
+        bus.start();
     }
 }
 
