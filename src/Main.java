@@ -216,13 +216,42 @@ public class Main {
 //        library.displayInfo();
 
 //        Composition
-        Bus bus = new Bus("Layland", 2010, "V8");
+//        Bus bus = new Bus("Layland", 2010, "V8");
+//
+//        System.out.println(bus.model);
+//        System.out.println(bus.year);
+//        System.out.println(bus.engine.type);
+//
+//        bus.start();
 
-        System.out.println(bus.model);
-        System.out.println(bus.year);
-        System.out.println(bus.engine.type);
+//        Wrapper classes
+        Integer a = new Integer(123);
+        Double b = new Double(2.14);
+        Character c = new Character('$');
+        Boolean d = new Boolean(true);
 
-        bus.start();
+//         New way of Wrapper classes
+//         This technique is called "Autoboxing"
+        Integer l = 123;
+        Double m = 3.13;
+
+//        Unboxing
+        int x = l;
+        double y = m;
+
+//        Convert primitive data types in to string using wrapper classes
+        String o = Integer.toString(123);
+        String p = Double.toString(2.32);
+        String q = Character.toString('$');
+        String r = Boolean.toString(true);
+
+        String result = o + p + q + r;
+        System.out.println(result);
+
+        char letter = 'B';
+        System.out.println(Character.isLetter(letter));
+
+        System.out.println(Character.isUpperCase(letter));
     }
 }
 
