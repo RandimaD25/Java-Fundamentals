@@ -1,6 +1,4 @@
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.InputMismatchException;
@@ -328,21 +326,35 @@ public class Main {
 
 //        How to write a file using java
 
-        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
-        String textContent = """
-                Roses are Red
-                Violets are Blue
-                BOOTY BOOTY BOOTY
-                Rocking Everywhere
-                """;
+//        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
+//        String textContent = """
+//                Roses are Red
+//                Violets are Blue
+//                BOOTY BOOTY BOOTY
+//                Rocking Everywhere
+//                """;
+//
+//        try (FileWriter writer = new FileWriter(filePath)) {
+//            writer.write(textContent);
+//            System.out.println("File has been written");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Could not locate the file location");
+//        } catch (IOException e) {
+//            System.out.println("Could not write file");
+//        }
 
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(textContent);
-            System.out.println("File has been written");
+//        How to read a file
+        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
         } catch (FileNotFoundException e) {
-            System.out.println("Could not locate the file location");
+            System.out.println("Could not locate file.");
         } catch (IOException e) {
-            System.out.println("Could not write file");
+            System.out.println("Something went wrong");
         }
     }
 }
