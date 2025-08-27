@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -225,33 +227,81 @@ public class Main {
 //        bus.start();
 
 //        Wrapper classes
-        Integer a = new Integer(123);
-        Double b = new Double(2.14);
-        Character c = new Character('$');
-        Boolean d = new Boolean(true);
+//        Integer a = new Integer(123);
+//        Double b = new Double(2.14);
+//        Character c = new Character('$');
+//        Boolean d = new Boolean(true);
+//
+////         New way of Wrapper classes
+////         This technique is called "Autoboxing"
+//        Integer l = 123;
+//        Double m = 3.13;
+//
+////        Unboxing
+//        int x = l;
+//        double y = m;
+//
+////        Convert primitive data types in to string using wrapper classes
+//        String o = Integer.toString(123);
+//        String p = Double.toString(2.32);
+//        String q = Character.toString('$');
+//        String r = Boolean.toString(true);
+//
+//        String result = o + p + q + r;
+//        System.out.println(result);
+//
+//        char letter = 'B';
+//        System.out.println(Character.isLetter(letter));
+//
+//        System.out.println(Character.isUpperCase(letter));
 
-//         New way of Wrapper classes
-//         This technique is called "Autoboxing"
-        Integer l = 123;
-        Double m = 3.13;
+//        ArrayList
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(3);
+        list.add(5);
+        list.remove(2);
+        list.set(0, 10);
 
-//        Unboxing
-        int x = l;
-        double y = m;
+        System.out.println(list);
 
-//        Convert primitive data types in to string using wrapper classes
-        String o = Integer.toString(123);
-        String p = Double.toString(2.32);
-        String q = Character.toString('$');
-        String r = Boolean.toString(true);
+        ArrayList<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+        fruits.add("Coconut");
+        fruits.remove(0);
+        fruits.set(1, "Pineapple");
 
-        String result = o + p + q + r;
-        System.out.println(result);
+        Collections.sort(fruits);
 
-        char letter = 'B';
-        System.out.println(Character.isLetter(letter));
+        System.out.println(fruits.get(0));
+        System.out.println(fruits.size());
+        System.out.println(fruits);
 
-        System.out.println(Character.isUpperCase(letter));
+        for(String fruit: fruits) {
+            System.out.println(fruit);
+        }
+
+        Scanner scanner = new Scanner(System.in);
+
+        ArrayList<String> foods = new ArrayList<>();
+
+        Boolean terms = true;
+        while (terms) {
+            System.out.print("What would you like to eat: ");
+            String food = scanner.nextLine();
+            foods.add(food);
+
+            System.out.print("Would you like to add more food : (true / false): ");
+            terms = scanner.nextBoolean();
+            scanner.nextLine();
+        }
+
+
+        System.out.println(foods);
+
+        scanner.close();
     }
 }
 
