@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -256,52 +257,72 @@ public class Main {
 //        System.out.println(Character.isUpperCase(letter));
 
 //        ArrayList
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(3);
-        list.add(5);
-        list.remove(2);
-        list.set(0, 10);
+//        ArrayList<Integer> list = new ArrayList<>();
+//        list.add(2);
+//        list.add(3);
+//        list.add(5);
+//        list.remove(2);
+//        list.set(0, 10);
+//
+//        System.out.println(list);
+//
+//        ArrayList<String> fruits = new ArrayList<>();
+//        fruits.add("Apple");
+//        fruits.add("Banana");
+//        fruits.add("Orange");
+//        fruits.add("Coconut");
+//        fruits.remove(0);
+//        fruits.set(1, "Pineapple");
+//
+//        Collections.sort(fruits);
+//
+//        System.out.println(fruits.get(0));
+//        System.out.println(fruits.size());
+//        System.out.println(fruits);
+//
+//        for(String fruit: fruits) {
+//            System.out.println(fruit);
+//        }
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        ArrayList<String> foods = new ArrayList<>();
+//
+//        Boolean terms = true;
+//        while (terms) {
+//            System.out.print("What would you like to eat: ");
+//            String food = scanner.nextLine();
+//            foods.add(food);
+//
+//            System.out.print("Would you like to add more food : (true / false): ");
+//            terms = scanner.nextBoolean();
+//            scanner.nextLine();
+//        }
+//
+//
+//        System.out.println(foods);
+//
+//        scanner.close();
 
-        System.out.println(list);
-
-        ArrayList<String> fruits = new ArrayList<>();
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Orange");
-        fruits.add("Coconut");
-        fruits.remove(0);
-        fruits.set(1, "Pineapple");
-
-        Collections.sort(fruits);
-
-        System.out.println(fruits.get(0));
-        System.out.println(fruits.size());
-        System.out.println(fruits);
-
-        for(String fruit: fruits) {
-            System.out.println(fruit);
+//        Exception
+        try {
+            System.out.println(1/0);
+        } catch (ArithmeticException e) {
+            System.out.println("YOU CANNOT DIVIDE BY 0 " + e);
         }
 
-        Scanner scanner = new Scanner(System.in);
-
-        ArrayList<String> foods = new ArrayList<>();
-
-        Boolean terms = true;
-        while (terms) {
-            System.out.print("What would you like to eat: ");
-            String food = scanner.nextLine();
-            foods.add(food);
-
-            System.out.print("Would you like to add more food : (true / false): ");
-            terms = scanner.nextBoolean();
-            scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a number: ");
+            int number = scanner.nextInt();
+            System.out.println(number);
+        } catch (InputMismatchException e) {
+            System.out.println("Entered value is not a number");
+        } catch (Exception e) { //safety net
+            System.out.println("Something wen wrong");
+        } finally {
+            System.out.println("This always execute");
         }
 
-
-        System.out.println(foods);
-
-        scanner.close();
     }
 }
 
