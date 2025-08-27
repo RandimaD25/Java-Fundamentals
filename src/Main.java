@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.InputMismatchException;
@@ -305,24 +308,42 @@ public class Main {
 //        scanner.close();
 
 //        Exception
-        try {
-            System.out.println(1/0);
-        } catch (ArithmeticException e) {
-            System.out.println("YOU CANNOT DIVIDE BY 0 " + e);
-        }
+//        try {
+//            System.out.println(1/0);
+//        } catch (ArithmeticException e) {
+//            System.out.println("YOU CANNOT DIVIDE BY 0 " + e);
+//        }
+//
+//        try (Scanner scanner = new Scanner(System.in)) {
+//            System.out.print("Enter a number: ");
+//            int number = scanner.nextInt();
+//            System.out.println(number);
+//        } catch (InputMismatchException e) {
+//            System.out.println("Entered value is not a number");
+//        } catch (Exception e) { //safety net
+//            System.out.println("Something wen wrong");
+//        } finally {
+//            System.out.println("This always execute");
+//        }
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.print("Enter a number: ");
-            int number = scanner.nextInt();
-            System.out.println(number);
-        } catch (InputMismatchException e) {
-            System.out.println("Entered value is not a number");
-        } catch (Exception e) { //safety net
-            System.out.println("Something wen wrong");
-        } finally {
-            System.out.println("This always execute");
-        }
+//        How to write a file using java
 
+        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
+        String textContent = """
+                Roses are Red
+                Violets are Blue
+                BOOTY BOOTY BOOTY
+                Rocking Everywhere
+                """;
+
+        try (FileWriter writer = new FileWriter(filePath)) {
+            writer.write(textContent);
+            System.out.println("File has been written");
+        } catch (FileNotFoundException e) {
+            System.out.println("Could not locate the file location");
+        } catch (IOException e) {
+            System.out.println("Could not write file");
+        }
     }
 }
 
