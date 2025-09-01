@@ -344,18 +344,36 @@ public class Main {
 //        }
 
 //        How to read a file
-        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
+//        String filePath = "C:\\Users\\Dell\\Desktop\\text.txt";
+//
+//        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+//            String line;
+//            while((line = reader.readLine()) != null) {
+//                System.out.println(line);
+//            }
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Could not locate file.");
+//        } catch (IOException e) {
+//            System.out.println("Something went wrong");
+//        }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while((line = reader.readLine()) != null) {
-                System.out.println(line);
+//        Anonymous class
+        Puppy puppy1 = new Puppy();
+        SpeakingPuppy speakingPuppy = new SpeakingPuppy();
+
+        puppy1.speak();
+        speakingPuppy.speak();
+
+//        Without creating a separate class for the just one object you can do like below
+        Puppy puppy2 = new Puppy() {
+//            within this block, you can set up uniques features or override any methods
+            @Override
+            void speak() {
+                System.out.println("Scooby Doo says Yo");
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Could not locate file.");
-        } catch (IOException e) {
-            System.out.println("Something went wrong");
-        }
+        };
+
+        puppy2.speak();
     }
 }
 
