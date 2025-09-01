@@ -1,8 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -358,22 +355,42 @@ public class Main {
 //        }
 
 //        Anonymous class
-        Puppy puppy1 = new Puppy();
-        SpeakingPuppy speakingPuppy = new SpeakingPuppy();
+//        Puppy puppy1 = new Puppy();
+//        SpeakingPuppy speakingPuppy = new SpeakingPuppy();
+//
+//        puppy1.speak();
+//        speakingPuppy.speak();
+//
+////        Without creating a separate class for the just one object you can do like below
+//        Puppy puppy2 = new Puppy() {
+////            within this block, you can set up uniques features or override any methods
+//            @Override
+//            void speak() {
+//                System.out.println("Scooby Doo says Yo");
+//            }
+//        };
+//
+//        puppy2.speak();
 
-        puppy1.speak();
-        speakingPuppy.speak();
+//        Timer and TimerTask
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask() {
+            int count = 3;
 
-//        Without creating a separate class for the just one object you can do like below
-        Puppy puppy2 = new Puppy() {
-//            within this block, you can set up uniques features or override any methods
             @Override
-            void speak() {
-                System.out.println("Scooby Doo says Yo");
+            public void run() {
+                System.out.println("Hello");
+                count--;
+
+                if (count <= 0) {
+                    System.out.println("Task Completed");
+                    timer.cancel();
+                }
             }
         };
 
-        puppy2.speak();
+//        timer.schedule(task, 3000);
+        timer.schedule(task, 0, 1000);
     }
 }
 
