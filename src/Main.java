@@ -406,25 +406,48 @@ public class Main {
 //        System.out.println(product2.getItem());
 //        System.out.println(product2.getPrice());
 
-//        HashMap
-        HashMap<String, Double> map = new HashMap<>();
-        map.put("Apple", 0.20);
-        map.put("Banana", 0.10);
-        map.put("Orange", 0.25);
-        map.put("Orange", 1000.00);  //it will override
-        map.put("Coconut", 1.20);
+////        HashMap
+//        HashMap<String, Double> map = new HashMap<>();
+//        map.put("Apple", 0.20);
+//        map.put("Banana", 0.10);
+//        map.put("Orange", 0.25);
+//        map.put("Orange", 1000.00);  //it will override
+//        map.put("Coconut", 1.20);
+//
+//        map.remove("Apple");
+//
+//        System.out.println(map.get("Banana"));
+//        System.out.println(map.containsKey("Coconut"));
+//        System.out.println(map.containsValue(1000.00));
+//        System.out.println(map.size());
+//
+//        System.out.println(map);
+//
+//        for (String key: map.keySet()) {
+//            System.out.println(key + " : $ " + map.get(key));
+//        }
 
-        map.remove("Apple");
+//        Enum
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a day of the week: ");
+        String response = scanner.nextLine().toUpperCase();
 
-        System.out.println(map.get("Banana"));
-        System.out.println(map.containsKey("Coconut"));
-        System.out.println(map.containsValue(1000.00));
-        System.out.println(map.size());
+        try {
+            Day day = Day.valueOf(response);
+//        System.out.println(day);
+//        System.out.println(day.getDayNumber());
 
-        System.out.println(map);
-
-        for (String key: map.keySet()) {
-            System.out.println(key + " : $ " + map.get(key));
+            switch (day) {
+                case MONDAY,
+                     TUESDAY,
+                     WEDNESDAY,
+                     THURSDAY,
+                     FRIDAY -> System.out.println("It is a weekday");
+                case SATURDAY,
+                     SUNDAY-> System.out.println("It is a weekend");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Please enter a valid day");
         }
     }
 }
