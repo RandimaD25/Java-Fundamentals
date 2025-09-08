@@ -373,24 +373,59 @@ public class Main {
 //        puppy2.speak();
 
 //        Timer and TimerTask
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            int count = 3;
+//        Timer timer = new Timer();
+//        TimerTask task = new TimerTask() {
+//            int count = 3;
+//
+//            @Override
+//            public void run() {
+//                System.out.println("Hello");
+//                count--;
+//
+//                if (count <= 0) {
+//                    System.out.println("Task Completed");
+//                    timer.cancel();
+//                }
+//            }
+//        };
+//
+////        timer.schedule(task, 3000);
+//        timer.schedule(task, 0, 1000);
 
-            @Override
-            public void run() {
-                System.out.println("Hello");
-                count--;
+//        Generics
+//        Box<String> box = new Box<>();
+//        box.setItem("Banana");
+//        System.out.println(box.getItem());
+//
+//        Product<String, Double> product1 = new Product<>("Apple", 23.50);
+//        Product<String, Integer> product2 = new Product<>("Ticket", 100);
+//
+//        System.out.println(product1.getItem());
+//        System.out.println(product1.getPrice());
+//
+//        System.out.println(product2.getItem());
+//        System.out.println(product2.getPrice());
 
-                if (count <= 0) {
-                    System.out.println("Task Completed");
-                    timer.cancel();
-                }
-            }
-        };
+//        HashMap
+        HashMap<String, Double> map = new HashMap<>();
+        map.put("Apple", 0.20);
+        map.put("Banana", 0.10);
+        map.put("Orange", 0.25);
+        map.put("Orange", 1000.00);  //it will override
+        map.put("Coconut", 1.20);
 
-//        timer.schedule(task, 3000);
-        timer.schedule(task, 0, 1000);
+        map.remove("Apple");
+
+        System.out.println(map.get("Banana"));
+        System.out.println(map.containsKey("Coconut"));
+        System.out.println(map.containsValue(1000.00));
+        System.out.println(map.size());
+
+        System.out.println(map);
+
+        for (String key: map.keySet()) {
+            System.out.println(key + " : $ " + map.get(key));
+        }
     }
 }
 
