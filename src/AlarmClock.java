@@ -8,6 +8,7 @@ public class AlarmClock {
         Scanner scanner = new Scanner(System.in);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalTime alarmTime = null;
+        String filePath = "On The Flip.wav";
 
         while (alarmTime == null) {
             try {
@@ -22,9 +23,8 @@ public class AlarmClock {
 
         }
 
-        Alarm alarm = new Alarm(alarmTime);
+        Alarm alarm = new Alarm(alarmTime, filePath, scanner);
         Thread alarmThread = new Thread(alarm);
         alarmThread.start();
-        scanner.close();
     }
 }
